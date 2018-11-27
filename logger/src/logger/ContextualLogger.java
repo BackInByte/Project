@@ -3,12 +3,12 @@ package logger;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-public class ContextualLogger implements Logger {
+class ContextualLogger implements Logger {
 
 
     private Logger delegateLogger;
 
-    ContextualLogger(Logger delegateLogger) {
+    public ContextualLogger(Logger delegateLogger) {
         this.delegateLogger = delegateLogger;
     }
 

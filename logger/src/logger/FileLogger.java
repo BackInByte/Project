@@ -8,12 +8,12 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 
-public class FileLogger implements Logger {
+class FileLogger implements Logger {
 
 
     private final Path path;
 
-    FileLogger(String pathAsString) {
+    public FileLogger(String pathAsString) {
         path = Paths.get(pathAsString).toAbsolutePath();
     }
 

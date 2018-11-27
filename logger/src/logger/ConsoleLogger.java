@@ -1,6 +1,6 @@
 package logger;
 
-public class ConsoleLogger implements Logger{
+class ConsoleLogger implements Logger{
 
     public void info(String category, String message) {
         if (!category.equals("INPUT")) {
