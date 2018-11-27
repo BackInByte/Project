@@ -14,6 +14,7 @@ public class Test_TVA {
     private DecimalFormat df = new DecimalFormat("#.##");
 
     public void Test_get_TVA_entier(){
+        long debut = System.currentTimeMillis();
         String message ="\nPrix hors-taxe entré: 150 €\nTVA attendue: 15 €\n";
         double TVA = note.getTVA(150);
         String test_TVA = df.format(TVA);
@@ -21,9 +22,12 @@ public class Test_TVA {
             throw new AssertionError(message+"La TVA de "+150+"€ devrait être "+15+"€, mais le résultat obtenu est "+test_TVA+"€");
         } else {
             logger.info("PROGRAM",message+"Le test de la fonction getTVA (avec un entier) a été réussi\n"); }
+        long fin = +System.currentTimeMillis()-debut;
+        logger.info("PROGRAM","Temps d'éxecution = "+fin+" millisecondes\n");
     }
 
     public void Test_get_TVA_decimal(){
+        long debut = System.currentTimeMillis();
         String message = "\nPrix hors-taxe entré: 150.48 €\nTVA attendue: 15.05 €\n";
         double TVA = note.getTVA(150.48);
         String test_TVA = df.format(TVA);
@@ -31,9 +35,12 @@ public class Test_TVA {
             throw new AssertionError(message+"La TVA de "+150.48+"€ devrait être "+15.05+"€, mais le résultat obtenu est "+test_TVA+"€");
         } else {
             logger.info("PROGRAM",message+"Le test de la fonction getTVA (avec un nombre décimal) a été réussi\n"); }
+        long fin = +System.currentTimeMillis()-debut;
+        logger.info("PROGRAM","Temps d'éxecution = "+fin+" millisecondes\n");
     }
 
     public void Test_get_TVA_nulle(){
+        long debut = System.currentTimeMillis();
         String message = "\nPrix hors-taxe entré: 0 €\nTVA attendue: 0 €\n";
         double TVA = note.getTVA(0);
         String test_TVA = df.format(TVA);
@@ -41,6 +48,8 @@ public class Test_TVA {
             throw new AssertionError(message+"La TVA de "+0+"€ devrait être "+0+"€, mais le résultat obtenu est "+test_TVA+"€");
         } else {
             logger.info("PROGRAM",message+"Le test de la fonction getTVA (avec un prix de 0 €) a été réussi\n"); }
+        long fin = +System.currentTimeMillis()-debut;
+        logger.info("PROGRAM","Temps d'éxecution = "+fin+" millisecondes\n");
     }
 
 }

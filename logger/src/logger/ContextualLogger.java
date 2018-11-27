@@ -3,7 +3,7 @@ package logger;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-public class ContextualLogger implements Logger {
+class ContextualLogger implements Logger {
 
 
     private Logger delegateLogger;

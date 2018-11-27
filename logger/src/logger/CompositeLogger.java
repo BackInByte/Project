@@ -1,6 +1,6 @@
 package logger;
 
-public class CompositeLogger implements Logger {
+class CompositeLogger implements Logger {
 
     private Logger logger1;
     private Logger logger2;
