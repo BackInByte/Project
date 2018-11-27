@@ -39,7 +39,7 @@ public class Produits {
         double inf = Double.POSITIVE_INFINITY;
         create_add("bagel", 20, 8);
         create_add("burger", 10, 10);
-        create_add("smoothie", 5, 5);
+        create_add("smoothie", 30, 5);
         create_add("café", (int)inf, 2);
     }
 
