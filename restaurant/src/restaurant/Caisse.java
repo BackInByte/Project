@@ -8,7 +8,8 @@ public class Caisse {
     private java.text.DecimalFormat df = new java.text.DecimalFormat("0.##");
     private Logger logger = LoggerFactory.getLogger("caisse");
     private static double total_TVA = 0;
-    private static double total_argent = 0;
+    private static double total_benefices = 0;
+    private static double total_rentrees_argent = 0;
 
 
     //A l'arrivée des clients dans le restaurant, on ouvre une note
@@ -56,19 +57,21 @@ public class Caisse {
 
     //Affichage des comptes (fin de journée)
     public void donnees_comptable(){
-        logger.info("OUTPUT", String.format("Total des rentrées d'argent: %s €\n", df.format(total_argent)));
+        logger.info("OUTPUT", String.format("\nTotal des rentrées d'argent: %s €\n", df.format(total_rentrees_argent)));
         logger.info("OUTPUT", String.format("Total de la TVA facturée: %s €\n", df.format(total_TVA)));
+        logger.info("OUTPUT", String.format("Total des bénéfices: %s €\n", df.format(total_benefices)));
     }
 
 
     //Mettre à jour les comptes après cloture d'une note d'un client
     static void mise_a_jour_donnees_comptable(boolean remise, double prixHT, double TVA){
         if(!remise){//sans remise
-            Caisse.total_argent = Caisse.total_argent + prixHT; //+TVA?
-            Caisse.total_TVA = Caisse.total_TVA + TVA;
+            total_benefices = total_benefices + prixHT;
+            total_TVA = total_TVA + TVA;
         }else{
-            Caisse.total_argent = Caisse.total_argent + (prixHT - prixHT*0.1); //+(TVA - TVA*0.1)?
-            Caisse.total_TVA= Caisse.total_TVA + (TVA - TVA*0.1);}
+            total_benefices = total_benefices + (prixHT - prixHT*0.1);
+            total_TVA = total_TVA + (TVA - TVA*0.1);}
+        total_rentrees_argent = total_benefices + total_TVA;
     }
 
 }

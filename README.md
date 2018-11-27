@@ -55,6 +55,7 @@ IntelliJ IDEA
 
 ## Difficultés rencontrées:
 ### __Gestion de multiples cas:__
+- Vérifier qu'on entre un entier positif lors de la demande d'un prix ou d'une quantité
 - Vérifier qu'un client existe bien lors de l'entrée du nom d'un client
 - Vérifier qu'un produit soit en vente lors de l'entrée du nom d'un produit
 - Vérifier qu'il y ait assez d'un produit par rapport à la quantité demandée par un client
