@@ -13,7 +13,7 @@ public class FileLogger implements Logger {
 
     private final Path path;
 
-    FileLogger(String pathAsString) {
+    public FileLogger(String pathAsString) {
         path = Paths.get(pathAsString).toAbsolutePath();
     }
 

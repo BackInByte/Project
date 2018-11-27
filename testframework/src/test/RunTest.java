@@ -11,6 +11,7 @@ public class RunTest {
     private static Test_Produit test_produit = new Test_Produit();
     private static Logger logger = LoggerFactory.getLogger("RunTest");
 
+
     public static void main(String[] args) {
         logger.info("PROGRAM","TESTS\n\n");
 
@@ -25,6 +26,8 @@ public class RunTest {
         test_produit.test_getIndexAliment(produits);
         test_produit.test_verif_aliment_existant(produits);
         test_produit.test_verif_aliment_inexistant(produits);
+
+
 
     }
 

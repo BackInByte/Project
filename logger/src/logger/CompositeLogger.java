@@ -5,7 +5,7 @@ public class CompositeLogger implements Logger {
     private Logger logger1;
     private Logger logger2;
 
-    CompositeLogger(Logger logger1, Logger logger2) {
+    public CompositeLogger(Logger logger1, Logger logger2) {
         this.logger1 = logger1;
         this.logger2 = logger2;
     }
