@@ -4,7 +4,6 @@
 Etudes
 
 ## Développeurs
-<br/>
 Etudiants en 3ème année à l'ESIEA
 
 ## Lien des consignes :
