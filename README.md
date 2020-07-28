@@ -4,7 +4,7 @@
 Etudes
 
 ## Développeurs
-Etudiants en 3ème année à l'ESIEA
+Etudiants en 3ème année
 
 ## Lien des consignes :
 https://github.com/ledoyen/tp-java/tree/master/projet/3A_2018
