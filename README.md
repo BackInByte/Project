@@ -4,8 +4,7 @@
 Etudes
 
 ## Développeurs
-- Daniel Elgrably
-- Axel Dran<br/>
+<br/>
 Etudiants en 3ème année à l'ESIEA
 
 ## Lien des consignes :
